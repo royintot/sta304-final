@@ -1,0 +1,87 @@
+---
+title: "Maternal smoking during pregnancy and newborn's health"
+subtitle: "A propensity score matching case study"
+author: 
+  - Ruoyun Wang
+thanks: "Code and data are available at: https://github.com/royintot/sta304-final"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: "This paper studies the impact of maternal smoking on newborns' health. A property score matching method is used to march these observations to eliminate the difference between smoking and non-smoking mothers in the sample. The matching data is used to study the effect of maternal smoking on babies' birth weight and premature birth. The results showed that smoking had a more significant impact on the health of infants after prevalence score matching."
+output:
+  bookdown::pdf_document2
+toc: FALSE
+bibliography: references.bib
+---
+
+**Keywords**: Smoking, birth weight, propensity score matching, health
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(palmerpenguins)
+library(openintro)
+```
+
+# Introduction
+
+Smoking is harmful to yourself and adversely affects the health of those around you. Studies have shown that lung cancer in non-smoking women may be caused by inhaling fumes from their husbands (Smith, 2003). Passive smoking is also harmful to the human body. The fetus gets Nutrition through the mother, and the mother's habits will affect the fetus's health. Babies of smoking mothers are more likely to develop the respiratory disease than other infants (Stick & Burton, 1996). Birth weight is one of the essential indicators to measure the health of babies. Low birth weight will have many adverse effects on infants. In the United States, 65% of infant events occur in low birth weight (LBW) infants (<2500). The causes of LBW are unknown. Environment, Nutrition, genetics and so on may cause LBW (Wang & Zuckerman,2002). In this paper, by randomly sampling the birth information of infants in the United States in 2014, to study the impact of maternal smoking on infant health, to verify that Maternal smoking will cause harm to infant health.
+
+
+
+
+
+# Data
+
+
+
+```{r}
+df = births14
+summary(df)
+```
+
+
+
+
+
+# Model
+
+\begin{equation}
+Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
+\end{equation}
+
+
+# Results
+
+# Discussion
+
+## First discussion point
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional details
+
+
+\newpage
+
+
+# References
+Smith, G. D. (2003). Effect of passive smoking on health. Bmj, 326(7398), 1048-1049.
+
+Stick, S. M., Burton, P. R., Gurrin, L., Sly, P. D., & LeSouef, P. N. (1996). Effects of maternal smoking during pregnancy and a family history of asthma on respiratory function in newborn infants. The Lancet, 348(9034), 1060-1064.
+
+Wang, X., Zuckerman, B., Pearson, C., Kaufman, G., Chen, C., Wang, G., ... & Xu, X. (2002). Maternal cigarette smoking, metabolic gene polymorphism, and infant birth weight. Jama, 287(2), 195-202.
